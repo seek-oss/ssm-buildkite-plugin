@@ -1,0 +1,15 @@
+name: SSM
+description: Retrieve parameters from ssm and make available to your jobs
+author: https://github.com/seek-oss/ssm-buildkite-plugin
+public: true
+requirements:
+  - aws
+  - bash
+configuration:
+  properties:
+    assume-role-arn:
+      type: string
+    ssmkey:
+      type: string
+  required:
+    - ssmkey
