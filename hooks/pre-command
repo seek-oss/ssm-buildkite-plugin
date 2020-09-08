@@ -21,6 +21,7 @@ main() {
   fi
 
   local awsregion=${AWS_DEFAULT_REGION:-us-east-1}
+  local ssmkey="${BUILDKITE_PLUGIN_SSM_SSMKEY:-}"
   local envvar="${BUILDKITE_PLUGIN_SSM_ENVVAR:-}"
   ssm_get_parameter "$ssmkey" "$awsregion" "$envvar"
 
