@@ -11,5 +11,7 @@ configuration:
       type: string
     ssmkey:
       type: string
+    envvar:
+      type: string
   required:
     - ssmkey
