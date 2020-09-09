@@ -21,9 +21,9 @@ steps:
 - label: ":arrow_double_up::load: Load SSM"
   command: "env | grep MySecret"
   plugins:
-    seek-oss/ssm#v0.1.0:
-      assume-role-arn: "arn:aws:iam::123456789012:role/RoleToAssume-1234567890"
-      ssmkey: "MySecret"
+    - seek-oss/ssm#v0.1.0:
+        assume-role-arn: "arn:aws:iam::123456789012:role/RoleToAssume-1234567890"
+        ssmkey: "MySecret"
 ```
 
 The resulting environment variable will be named 'MySecret'
