@@ -26,7 +26,16 @@ steps:
         ssmkey: "MySecret"
 ```
 
-The resulting environment variable will be named 'MySecret'
+The resulting environment variable will be named 'MySecret'. You can change the name of the resulting environment variable by setting `envvar` like so:
+```
+  plugins:
+    - seek-oss/ssm#v0.1.0:
+        assume-role-arn: "arn:aws:iam::123456789012:role/RoleToAssume-1234567890"
+        ssmkey: "MySecret"
+        envvar: "SecretName"
+```
+
+The environment variable can then be used like in the following examples:
 ```
 Running commands
 $ env | grep MySecret
