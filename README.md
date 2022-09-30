@@ -21,7 +21,7 @@ steps:
 - label: ":arrow_double_up::load: Load SSM"
   command: "env | grep MySecret"
   plugins:
-    - seek-oss/ssm#v0.1.0:
+    - seek-oss/ssm#v0.2.0:
         assume-role-arn: "arn:aws:iam::123456789012:role/RoleToAssume-1234567890"
         ssmkey: "MySecret"
 ```
@@ -31,7 +31,7 @@ You can change the name of the resulting environment variable by setting `envvar
 
 ```yaml
   plugins:
-    - seek-oss/ssm#v0.1.0:
+    - seek-oss/ssm#v0.2.0:
         assume-role-arn: "arn:aws:iam::123456789012:role/RoleToAssume-1234567890"
         ssmkey: "MySecret"
         envvar: "SecretName"
